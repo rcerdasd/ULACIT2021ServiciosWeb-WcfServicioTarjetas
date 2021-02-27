@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TARJETAS_ULACITModelStoreContainer" CdmEntityContainer="TARJETAS_ULACITEntities">
+    <EntitySetMapping Name="EMISOR">
+      <EntityTypeMapping TypeName="TARJETAS_ULACITModel.EMISOR">
+        <MappingFragment StoreEntitySet="EMISOR">
+          <ScalarProperty Name="EMI_CODIGO" ColumnName="EMI_CODIGO" />
+          <ScalarProperty Name="EMI_DESCRIPCION" ColumnName="EMI_DESCRIPCION" />
+          <ScalarProperty Name="EMI_PREFIJO" ColumnName="EMI_PREFIJO" />
+          <ScalarProperty Name="EMI_NUMERO_DIGITOS" ColumnName="EMI_NUMERO_DIGITOS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

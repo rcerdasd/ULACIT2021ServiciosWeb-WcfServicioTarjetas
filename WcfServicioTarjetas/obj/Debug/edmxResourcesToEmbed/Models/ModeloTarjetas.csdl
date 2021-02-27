@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TARJETAS_ULACITModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="EMISOR">
+    <Key>
+      <PropertyRef Name="EMI_CODIGO" />
+    </Key>
+    <Property Name="EMI_CODIGO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EMI_DESCRIPCION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EMI_PREFIJO" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EMI_NUMERO_DIGITOS" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="TARJETAS_ULACITEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="EMISOR" EntityType="Self.EMISOR" />
+  </EntityContainer>
+</Schema>

@@ -5,6 +5,11 @@ VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServicioTarjetas", "WcfServicioTarjetas\WcfServicioTarjetas.csproj", "{DA279214-4402-4E39-8D5A-264E8FF96FE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicacionTarjetas", "AplicacionTarjetas\AplicacionTarjetas.csproj", "{8437A75F-D5FD-4D17-B281-BC1966D3EA59}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DA279214-4402-4E39-8D5A-264E8FF96FE5} = {DA279214-4402-4E39-8D5A-264E8FF96FE5}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +20,10 @@ Global
 		{DA279214-4402-4E39-8D5A-264E8FF96FE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA279214-4402-4E39-8D5A-264E8FF96FE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA279214-4402-4E39-8D5A-264E8FF96FE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8437A75F-D5FD-4D17-B281-BC1966D3EA59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8437A75F-D5FD-4D17-B281-BC1966D3EA59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8437A75F-D5FD-4D17-B281-BC1966D3EA59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8437A75F-D5FD-4D17-B281-BC1966D3EA59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

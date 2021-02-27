@@ -1,0 +1,11 @@
+C:\2021ServiciosWeb\WcfServicioTarjetas\WcfServicioTarjetas\bin\WcfServicioTarjetas.dll.config
+C:\2021ServiciosWeb\WcfServicioTarjetas\WcfServicioTarjetas\bin\WcfServicioTarjetas.dll
+C:\2021ServiciosWeb\WcfServicioTarjetas\WcfServicioTarjetas\bin\WcfServicioTarjetas.pdb
+C:\2021ServiciosWeb\WcfServicioTarjetas\WcfServicioTarjetas\bin\EntityFramework.dll
+C:\2021ServiciosWeb\WcfServicioTarjetas\WcfServicioTarjetas\bin\EntityFramework.SqlServer.dll
+C:\2021ServiciosWeb\WcfServicioTarjetas\WcfServicioTarjetas\bin\EntityFramework.xml
+C:\2021ServiciosWeb\WcfServicioTarjetas\WcfServicioTarjetas\bin\EntityFramework.SqlServer.xml
+C:\2021ServiciosWeb\WcfServicioTarjetas\WcfServicioTarjetas\obj\Debug\WcfServicioTarjetas.csproj.CoreCompileInputs.cache
+C:\2021ServiciosWeb\WcfServicioTarjetas\WcfServicioTarjetas\obj\Debug\WcfServicioTarjetas.csproj.CopyComplete
+C:\2021ServiciosWeb\WcfServicioTarjetas\WcfServicioTarjetas\obj\Debug\WcfServicioTarjetas.dll
+C:\2021ServiciosWeb\WcfServicioTarjetas\WcfServicioTarjetas\obj\Debug\WcfServicioTarjetas.pdb

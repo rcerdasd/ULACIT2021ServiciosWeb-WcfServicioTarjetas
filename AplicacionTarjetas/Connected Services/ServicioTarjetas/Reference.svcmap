@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="aafdab74-664c-4193-bb25-6f2444180f5a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53826/ServiceEmisor.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceEmisor.xsd" MetadataType="Schema" ID="149e6c24-8856-4458-aada-ea3c0f5a6b0a" SourceId="1" SourceUrl="http://localhost:53826/ServiceEmisor.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceEmisor1.xsd" MetadataType="Schema" ID="d54b0d58-797b-45a9-8053-80f02d988aed" SourceId="1" SourceUrl="http://localhost:53826/ServiceEmisor.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServiceEmisor2.xsd" MetadataType="Schema" ID="feb8b645-e57c-45e6-b609-728775fb2eba" SourceId="1" SourceUrl="http://localhost:53826/ServiceEmisor.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceEmisor3.xsd" MetadataType="Schema" ID="86eaa6a3-565c-4a9d-a462-c5ef26578800" SourceId="1" SourceUrl="http://localhost:53826/ServiceEmisor.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceEmisor.disco" MetadataType="Disco" ID="4876d337-e544-4dab-9728-2c7abbe6d912" SourceId="1" SourceUrl="http://localhost:53826/ServiceEmisor.svc?disco" />
+    <MetadataFile FileName="ServiceEmisor.wsdl" MetadataType="Wsdl" ID="469c3123-06ed-40ce-a132-cf3fc08c36bb" SourceId="1" SourceUrl="http://localhost:53826/ServiceEmisor.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
