@@ -26,5 +26,6 @@ namespace WcfServicioTarjetas.Models
         }
     
         public virtual DbSet<EMISOR> EMISOR { get; set; }
+        public virtual DbSet<TARJETA> TARJETA { get; set; }
     }
 }

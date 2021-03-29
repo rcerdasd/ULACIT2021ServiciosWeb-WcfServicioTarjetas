@@ -11,21 +11,27 @@ namespace WcfServicioTarjetas
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
     [ServiceContract]
-    public interface IEmisor
+    public interface ITarjeta
     {
 
         [OperationContract]
-        IEnumerable<EMISOR> ConsultarEmisores();
+        IEnumerable<TARJETA> ConsultarTarjetas();
 
         [OperationContract]
-        string TipoEmisorDePrefijo(string prefijo);
+        string ObtenerEmisorTarjeta(string NumeroTarjeta);
 
+        [OperationContract]
+        TARJETA ObtenerInformacionTarjeta(string NumeroTarjeta);
+
+        [OperationContract]
+        string ValidarTarjeta(string NumeroTarjeta);
+        
 
         [OperationContract]
         string GetData(int value);
 
         [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
+        CompositeTypeT GetDataUsingDataContract(CompositeTypeT composite);
 
         // TODO: Add your service operations here
     }
@@ -33,7 +39,7 @@ namespace WcfServicioTarjetas
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.
     [DataContract]
-    public class CompositeType
+    public class CompositeTypeT
     {
         bool boolValue = true;
         string stringValue = "Hello ";

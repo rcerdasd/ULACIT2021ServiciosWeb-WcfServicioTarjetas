@@ -11,5 +11,21 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="TARJETA">
+      <EntityTypeMapping TypeName="TARJETAS_ULACITModel.TARJETA">
+        <MappingFragment StoreEntitySet="TARJETA">
+          <ScalarProperty Name="EMI_CODIGO" ColumnName="EMI_CODIGO" />
+          <ScalarProperty Name="TAR_NOMBRE_CLIENTE" ColumnName="TAR_NOMBRE_CLIENTE" />
+          <ScalarProperty Name="TAR_CODIGO_CLIENTE" ColumnName="TAR_CODIGO_CLIENTE" />
+          <ScalarProperty Name="TAR_ESTADO" ColumnName="TAR_ESTADO" />
+          <ScalarProperty Name="TAR_FECHA_VENCIMIENTO" ColumnName="TAR_FECHA_VENCIMIENTO" />
+          <ScalarProperty Name="TAR_FECHA_EMISION" ColumnName="TAR_FECHA_EMISION" />
+          <ScalarProperty Name="TAR_SALDO" ColumnName="TAR_SALDO" />
+          <ScalarProperty Name="TAR_TIPO" ColumnName="TAR_TIPO" />
+          <ScalarProperty Name="TAR_NUMERO" ColumnName="TAR_NUMERO" />
+          <ScalarProperty Name="TAR_CODIGO" ColumnName="TAR_CODIGO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

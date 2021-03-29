@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="TARJETAS_ULACITModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="TARJETAS_ULACITModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="EMISOR">
           <Key>
             <PropertyRef Name="EMI_CODIGO" />
@@ -14,11 +14,42 @@
           <Property Name="EMI_PREFIJO" Type="varchar" MaxLength="5" Nullable="false" />
           <Property Name="EMI_NUMERO_DIGITOS" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="TARJETA">
+          <Key>
+            <PropertyRef Name="TAR_CODIGO" />
+          </Key>
+          <Property Name="TAR_CODIGO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TAR_NUMERO" Type="varchar" MaxLength="50" />
+          <Property Name="TAR_TIPO" Type="varchar" MaxLength="1" />
+          <Property Name="TAR_SALDO" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="TAR_FECHA_EMISION" Type="date" />
+          <Property Name="TAR_FECHA_VENCIMIENTO" Type="date" />
+          <Property Name="TAR_ESTADO" Type="varchar" MaxLength="1" />
+          <Property Name="TAR_CODIGO_CLIENTE" Type="int" />
+          <Property Name="TAR_NOMBRE_CLIENTE" Type="varchar" MaxLength="50" />
+          <Property Name="EMI_CODIGO" Type="int" />
+        </EntityType>
+        <Association Name="FK_TARJETA_EMISOR">
+          <End Role="EMISOR" Type="Self.EMISOR" Multiplicity="0..1" />
+          <End Role="TARJETA" Type="Self.TARJETA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMISOR">
+              <PropertyRef Name="EMI_CODIGO" />
+            </Principal>
+            <Dependent Role="TARJETA">
+              <PropertyRef Name="EMI_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="TARJETAS_ULACITModelStoreContainer">
           <EntitySet Name="EMISOR" EntityType="Self.EMISOR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TARJETA" EntityType="Self.TARJETA" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_TARJETA_EMISOR" Association="Self.FK_TARJETA_EMISOR">
+            <End Role="EMISOR" EntitySet="EMISOR" />
+            <End Role="TARJETA" EntitySet="TARJETA" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="TARJETAS_ULACITModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -30,10 +61,44 @@
           <Property Name="EMI_DESCRIPCION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="EMI_PREFIJO" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="EMI_NUMERO_DIGITOS" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TARJETA" Relationship="TARJETAS_ULACITModel.FK_TARJETA_EMISOR" FromRole="EMISOR" ToRole="TARJETA" />
         </EntityType>
         <EntityContainer Name="TARJETAS_ULACITEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="EMISOR" EntityType="Self.EMISOR" />
+          <EntitySet Name="TARJETA" EntityType="TARJETAS_ULACITModel.TARJETA" />
+          <AssociationSet Name="FK_TARJETA_EMISOR" Association="TARJETAS_ULACITModel.FK_TARJETA_EMISOR">
+            <End Role="EMISOR" EntitySet="EMISOR" />
+            <End Role="TARJETA" EntitySet="TARJETA" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="TARJETA">
+          <Key>
+            <PropertyRef Name="TAR_CODIGO" />
+          </Key>
+          <Property Name="TAR_CODIGO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TAR_NUMERO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TAR_TIPO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="TAR_SALDO" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="TAR_FECHA_EMISION" Type="DateTime" Precision="0" />
+          <Property Name="TAR_FECHA_VENCIMIENTO" Type="DateTime" Precision="0" />
+          <Property Name="TAR_ESTADO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="TAR_CODIGO_CLIENTE" Type="Int32" />
+          <Property Name="TAR_NOMBRE_CLIENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EMI_CODIGO" Type="Int32" />
+          <NavigationProperty Name="EMISOR" Relationship="TARJETAS_ULACITModel.FK_TARJETA_EMISOR" FromRole="TARJETA" ToRole="EMISOR" />
+        </EntityType>
+        <Association Name="FK_TARJETA_EMISOR">
+          <End Type="TARJETAS_ULACITModel.EMISOR" Role="EMISOR" Multiplicity="0..1" />
+          <End Type="TARJETAS_ULACITModel.TARJETA" Role="TARJETA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMISOR">
+              <PropertyRef Name="EMI_CODIGO" />
+            </Principal>
+            <Dependent Role="TARJETA">
+              <PropertyRef Name="EMI_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -47,6 +112,22 @@
                 <ScalarProperty Name="EMI_DESCRIPCION" ColumnName="EMI_DESCRIPCION" />
                 <ScalarProperty Name="EMI_PREFIJO" ColumnName="EMI_PREFIJO" />
                 <ScalarProperty Name="EMI_NUMERO_DIGITOS" ColumnName="EMI_NUMERO_DIGITOS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TARJETA">
+            <EntityTypeMapping TypeName="TARJETAS_ULACITModel.TARJETA">
+              <MappingFragment StoreEntitySet="TARJETA">
+                <ScalarProperty Name="EMI_CODIGO" ColumnName="EMI_CODIGO" />
+                <ScalarProperty Name="TAR_NOMBRE_CLIENTE" ColumnName="TAR_NOMBRE_CLIENTE" />
+                <ScalarProperty Name="TAR_CODIGO_CLIENTE" ColumnName="TAR_CODIGO_CLIENTE" />
+                <ScalarProperty Name="TAR_ESTADO" ColumnName="TAR_ESTADO" />
+                <ScalarProperty Name="TAR_FECHA_VENCIMIENTO" ColumnName="TAR_FECHA_VENCIMIENTO" />
+                <ScalarProperty Name="TAR_FECHA_EMISION" ColumnName="TAR_FECHA_EMISION" />
+                <ScalarProperty Name="TAR_SALDO" ColumnName="TAR_SALDO" />
+                <ScalarProperty Name="TAR_TIPO" ColumnName="TAR_TIPO" />
+                <ScalarProperty Name="TAR_NUMERO" ColumnName="TAR_NUMERO" />
+                <ScalarProperty Name="TAR_CODIGO" ColumnName="TAR_CODIGO" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

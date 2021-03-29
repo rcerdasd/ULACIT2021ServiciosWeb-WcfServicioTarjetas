@@ -18,7 +18,13 @@ namespace WcfServicioTarjetas
             using (TARJETAS_ULACITEntities modelo = new TARJETAS_ULACITEntities())
                 return modelo.EMISOR.ToList();
         }
-        
+
+        public string TipoEmisorDePrefijo(string prefijo)
+        {
+            using (TARJETAS_ULACITEntities modelo = new TARJETAS_ULACITEntities())
+                return modelo.EMISOR.Single(t => t.EMI_PREFIJO == prefijo).EMI_DESCRIPCION;
+        }
+
         public string GetData(int value)
         {
             return string.Format("You entered: {0}", value);

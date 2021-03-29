@@ -8,119 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AplicacionTarjetas.ServicioTarjetas {
+namespace AplicacionTarjetas.ServiceReference1 {
     using System.Runtime.Serialization;
     using System;
     
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EMISOR", Namespace="http://schemas.datacontract.org/2004/07/WcfServicioTarjetas.Models")]
-    [System.SerializableAttribute()]
-    public partial class EMISOR : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int EMI_CODIGOField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EMI_DESCRIPCIONField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int EMI_NUMERO_DIGITOSField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EMI_PREFIJOField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AplicacionTarjetas.ServicioTarjetas.TARJETA[] TARJETAField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int EMI_CODIGO {
-            get {
-                return this.EMI_CODIGOField;
-            }
-            set {
-                if ((this.EMI_CODIGOField.Equals(value) != true)) {
-                    this.EMI_CODIGOField = value;
-                    this.RaisePropertyChanged("EMI_CODIGO");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EMI_DESCRIPCION {
-            get {
-                return this.EMI_DESCRIPCIONField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EMI_DESCRIPCIONField, value) != true)) {
-                    this.EMI_DESCRIPCIONField = value;
-                    this.RaisePropertyChanged("EMI_DESCRIPCION");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int EMI_NUMERO_DIGITOS {
-            get {
-                return this.EMI_NUMERO_DIGITOSField;
-            }
-            set {
-                if ((this.EMI_NUMERO_DIGITOSField.Equals(value) != true)) {
-                    this.EMI_NUMERO_DIGITOSField = value;
-                    this.RaisePropertyChanged("EMI_NUMERO_DIGITOS");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EMI_PREFIJO {
-            get {
-                return this.EMI_PREFIJOField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EMI_PREFIJOField, value) != true)) {
-                    this.EMI_PREFIJOField = value;
-                    this.RaisePropertyChanged("EMI_PREFIJO");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public AplicacionTarjetas.ServicioTarjetas.TARJETA[] TARJETA {
-            get {
-                return this.TARJETAField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TARJETAField, value) != true)) {
-                    this.TARJETAField = value;
-                    this.RaisePropertyChanged("TARJETA");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
@@ -132,7 +23,7 @@ namespace AplicacionTarjetas.ServicioTarjetas {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AplicacionTarjetas.ServicioTarjetas.EMISOR EMISORField;
+        private AplicacionTarjetas.ServiceReference1.EMISOR EMISORField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<int> EMI_CODIGOField;
@@ -175,7 +66,7 @@ namespace AplicacionTarjetas.ServicioTarjetas {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AplicacionTarjetas.ServicioTarjetas.EMISOR EMISOR {
+        public AplicacionTarjetas.ServiceReference1.EMISOR EMISOR {
             get {
                 return this.EMISORField;
             }
@@ -329,9 +220,118 @@ namespace AplicacionTarjetas.ServicioTarjetas {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CompositeType", Namespace="http://schemas.datacontract.org/2004/07/WcfServicioTarjetas")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EMISOR", Namespace="http://schemas.datacontract.org/2004/07/WcfServicioTarjetas.Models")]
     [System.SerializableAttribute()]
-    public partial class CompositeType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class EMISOR : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int EMI_CODIGOField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EMI_DESCRIPCIONField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int EMI_NUMERO_DIGITOSField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EMI_PREFIJOField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private AplicacionTarjetas.ServiceReference1.TARJETA[] TARJETAField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int EMI_CODIGO {
+            get {
+                return this.EMI_CODIGOField;
+            }
+            set {
+                if ((this.EMI_CODIGOField.Equals(value) != true)) {
+                    this.EMI_CODIGOField = value;
+                    this.RaisePropertyChanged("EMI_CODIGO");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EMI_DESCRIPCION {
+            get {
+                return this.EMI_DESCRIPCIONField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EMI_DESCRIPCIONField, value) != true)) {
+                    this.EMI_DESCRIPCIONField = value;
+                    this.RaisePropertyChanged("EMI_DESCRIPCION");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int EMI_NUMERO_DIGITOS {
+            get {
+                return this.EMI_NUMERO_DIGITOSField;
+            }
+            set {
+                if ((this.EMI_NUMERO_DIGITOSField.Equals(value) != true)) {
+                    this.EMI_NUMERO_DIGITOSField = value;
+                    this.RaisePropertyChanged("EMI_NUMERO_DIGITOS");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EMI_PREFIJO {
+            get {
+                return this.EMI_PREFIJOField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EMI_PREFIJOField, value) != true)) {
+                    this.EMI_PREFIJOField = value;
+                    this.RaisePropertyChanged("EMI_PREFIJO");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public AplicacionTarjetas.ServiceReference1.TARJETA[] TARJETA {
+            get {
+                return this.TARJETAField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TARJETAField, value) != true)) {
+                    this.TARJETAField = value;
+                    this.RaisePropertyChanged("TARJETA");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CompositeTypeT", Namespace="http://schemas.datacontract.org/2004/07/WcfServicioTarjetas")]
+    [System.SerializableAttribute()]
+    public partial class CompositeTypeT : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -389,75 +389,103 @@ namespace AplicacionTarjetas.ServicioTarjetas {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServicioTarjetas.IEmisor")]
-    public interface IEmisor {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.ITarjeta")]
+    public interface ITarjeta {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmisor/ConsultarEmisores", ReplyAction="http://tempuri.org/IEmisor/ConsultarEmisoresResponse")]
-        AplicacionTarjetas.ServicioTarjetas.EMISOR[] ConsultarEmisores();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITarjeta/ConsultarTarjetas", ReplyAction="http://tempuri.org/ITarjeta/ConsultarTarjetasResponse")]
+        AplicacionTarjetas.ServiceReference1.TARJETA[] ConsultarTarjetas();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmisor/ConsultarEmisores", ReplyAction="http://tempuri.org/IEmisor/ConsultarEmisoresResponse")]
-        System.Threading.Tasks.Task<AplicacionTarjetas.ServicioTarjetas.EMISOR[]> ConsultarEmisoresAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITarjeta/ConsultarTarjetas", ReplyAction="http://tempuri.org/ITarjeta/ConsultarTarjetasResponse")]
+        System.Threading.Tasks.Task<AplicacionTarjetas.ServiceReference1.TARJETA[]> ConsultarTarjetasAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmisor/TipoEmisorDePrefijo", ReplyAction="http://tempuri.org/IEmisor/TipoEmisorDePrefijoResponse")]
-        string TipoEmisorDePrefijo(string prefijo);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITarjeta/ObtenerEmisorTarjeta", ReplyAction="http://tempuri.org/ITarjeta/ObtenerEmisorTarjetaResponse")]
+        string ObtenerEmisorTarjeta(string NumeroTarjeta);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmisor/TipoEmisorDePrefijo", ReplyAction="http://tempuri.org/IEmisor/TipoEmisorDePrefijoResponse")]
-        System.Threading.Tasks.Task<string> TipoEmisorDePrefijoAsync(string prefijo);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITarjeta/ObtenerEmisorTarjeta", ReplyAction="http://tempuri.org/ITarjeta/ObtenerEmisorTarjetaResponse")]
+        System.Threading.Tasks.Task<string> ObtenerEmisorTarjetaAsync(string NumeroTarjeta);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmisor/GetData", ReplyAction="http://tempuri.org/IEmisor/GetDataResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITarjeta/ObtenerInformacionTarjeta", ReplyAction="http://tempuri.org/ITarjeta/ObtenerInformacionTarjetaResponse")]
+        AplicacionTarjetas.ServiceReference1.TARJETA ObtenerInformacionTarjeta(string NumeroTarjeta);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITarjeta/ObtenerInformacionTarjeta", ReplyAction="http://tempuri.org/ITarjeta/ObtenerInformacionTarjetaResponse")]
+        System.Threading.Tasks.Task<AplicacionTarjetas.ServiceReference1.TARJETA> ObtenerInformacionTarjetaAsync(string NumeroTarjeta);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITarjeta/ValidarTarjeta", ReplyAction="http://tempuri.org/ITarjeta/ValidarTarjetaResponse")]
+        string ValidarTarjeta(string NumeroTarjeta);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITarjeta/ValidarTarjeta", ReplyAction="http://tempuri.org/ITarjeta/ValidarTarjetaResponse")]
+        System.Threading.Tasks.Task<string> ValidarTarjetaAsync(string NumeroTarjeta);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITarjeta/GetData", ReplyAction="http://tempuri.org/ITarjeta/GetDataResponse")]
         string GetData(int value);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmisor/GetData", ReplyAction="http://tempuri.org/IEmisor/GetDataResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITarjeta/GetData", ReplyAction="http://tempuri.org/ITarjeta/GetDataResponse")]
         System.Threading.Tasks.Task<string> GetDataAsync(int value);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmisor/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IEmisor/GetDataUsingDataContractResponse")]
-        AplicacionTarjetas.ServicioTarjetas.CompositeType GetDataUsingDataContract(AplicacionTarjetas.ServicioTarjetas.CompositeType composite);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITarjeta/GetDataUsingDataContract", ReplyAction="http://tempuri.org/ITarjeta/GetDataUsingDataContractResponse")]
+        AplicacionTarjetas.ServiceReference1.CompositeTypeT GetDataUsingDataContract(AplicacionTarjetas.ServiceReference1.CompositeTypeT composite);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmisor/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IEmisor/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<AplicacionTarjetas.ServicioTarjetas.CompositeType> GetDataUsingDataContractAsync(AplicacionTarjetas.ServicioTarjetas.CompositeType composite);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITarjeta/GetDataUsingDataContract", ReplyAction="http://tempuri.org/ITarjeta/GetDataUsingDataContractResponse")]
+        System.Threading.Tasks.Task<AplicacionTarjetas.ServiceReference1.CompositeTypeT> GetDataUsingDataContractAsync(AplicacionTarjetas.ServiceReference1.CompositeTypeT composite);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IEmisorChannel : AplicacionTarjetas.ServicioTarjetas.IEmisor, System.ServiceModel.IClientChannel {
+    public interface ITarjetaChannel : AplicacionTarjetas.ServiceReference1.ITarjeta, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class EmisorClient : System.ServiceModel.ClientBase<AplicacionTarjetas.ServicioTarjetas.IEmisor>, AplicacionTarjetas.ServicioTarjetas.IEmisor {
+    public partial class TarjetaClient : System.ServiceModel.ClientBase<AplicacionTarjetas.ServiceReference1.ITarjeta>, AplicacionTarjetas.ServiceReference1.ITarjeta {
         
-        public EmisorClient() {
+        public TarjetaClient() {
         }
         
-        public EmisorClient(string endpointConfigurationName) : 
+        public TarjetaClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public EmisorClient(string endpointConfigurationName, string remoteAddress) : 
+        public TarjetaClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public EmisorClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public TarjetaClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public EmisorClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public TarjetaClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
-        public AplicacionTarjetas.ServicioTarjetas.EMISOR[] ConsultarEmisores() {
-            return base.Channel.ConsultarEmisores();
+        public AplicacionTarjetas.ServiceReference1.TARJETA[] ConsultarTarjetas() {
+            return base.Channel.ConsultarTarjetas();
         }
         
-        public System.Threading.Tasks.Task<AplicacionTarjetas.ServicioTarjetas.EMISOR[]> ConsultarEmisoresAsync() {
-            return base.Channel.ConsultarEmisoresAsync();
+        public System.Threading.Tasks.Task<AplicacionTarjetas.ServiceReference1.TARJETA[]> ConsultarTarjetasAsync() {
+            return base.Channel.ConsultarTarjetasAsync();
         }
         
-        public string TipoEmisorDePrefijo(string prefijo) {
-            return base.Channel.TipoEmisorDePrefijo(prefijo);
+        public string ObtenerEmisorTarjeta(string NumeroTarjeta) {
+            return base.Channel.ObtenerEmisorTarjeta(NumeroTarjeta);
         }
         
-        public System.Threading.Tasks.Task<string> TipoEmisorDePrefijoAsync(string prefijo) {
-            return base.Channel.TipoEmisorDePrefijoAsync(prefijo);
+        public System.Threading.Tasks.Task<string> ObtenerEmisorTarjetaAsync(string NumeroTarjeta) {
+            return base.Channel.ObtenerEmisorTarjetaAsync(NumeroTarjeta);
+        }
+        
+        public AplicacionTarjetas.ServiceReference1.TARJETA ObtenerInformacionTarjeta(string NumeroTarjeta) {
+            return base.Channel.ObtenerInformacionTarjeta(NumeroTarjeta);
+        }
+        
+        public System.Threading.Tasks.Task<AplicacionTarjetas.ServiceReference1.TARJETA> ObtenerInformacionTarjetaAsync(string NumeroTarjeta) {
+            return base.Channel.ObtenerInformacionTarjetaAsync(NumeroTarjeta);
+        }
+        
+        public string ValidarTarjeta(string NumeroTarjeta) {
+            return base.Channel.ValidarTarjeta(NumeroTarjeta);
+        }
+        
+        public System.Threading.Tasks.Task<string> ValidarTarjetaAsync(string NumeroTarjeta) {
+            return base.Channel.ValidarTarjetaAsync(NumeroTarjeta);
         }
         
         public string GetData(int value) {
@@ -468,11 +496,11 @@ namespace AplicacionTarjetas.ServicioTarjetas {
             return base.Channel.GetDataAsync(value);
         }
         
-        public AplicacionTarjetas.ServicioTarjetas.CompositeType GetDataUsingDataContract(AplicacionTarjetas.ServicioTarjetas.CompositeType composite) {
+        public AplicacionTarjetas.ServiceReference1.CompositeTypeT GetDataUsingDataContract(AplicacionTarjetas.ServiceReference1.CompositeTypeT composite) {
             return base.Channel.GetDataUsingDataContract(composite);
         }
         
-        public System.Threading.Tasks.Task<AplicacionTarjetas.ServicioTarjetas.CompositeType> GetDataUsingDataContractAsync(AplicacionTarjetas.ServicioTarjetas.CompositeType composite) {
+        public System.Threading.Tasks.Task<AplicacionTarjetas.ServiceReference1.CompositeTypeT> GetDataUsingDataContractAsync(AplicacionTarjetas.ServiceReference1.CompositeTypeT composite) {
             return base.Channel.GetDataUsingDataContractAsync(composite);
         }
     }

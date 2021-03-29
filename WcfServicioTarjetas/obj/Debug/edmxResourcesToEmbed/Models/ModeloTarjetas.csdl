@@ -8,8 +8,42 @@
     <Property Name="EMI_DESCRIPCION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="EMI_PREFIJO" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="EMI_NUMERO_DIGITOS" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TARJETA" Relationship="TARJETAS_ULACITModel.FK_TARJETA_EMISOR" FromRole="EMISOR" ToRole="TARJETA" />
   </EntityType>
   <EntityContainer Name="TARJETAS_ULACITEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="EMISOR" EntityType="Self.EMISOR" />
+    <EntitySet Name="TARJETA" EntityType="TARJETAS_ULACITModel.TARJETA" />
+    <AssociationSet Name="FK_TARJETA_EMISOR" Association="TARJETAS_ULACITModel.FK_TARJETA_EMISOR">
+      <End Role="EMISOR" EntitySet="EMISOR" />
+      <End Role="TARJETA" EntitySet="TARJETA" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="TARJETA">
+    <Key>
+      <PropertyRef Name="TAR_CODIGO" />
+    </Key>
+    <Property Name="TAR_CODIGO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TAR_NUMERO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TAR_TIPO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TAR_SALDO" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TAR_FECHA_EMISION" Type="DateTime" Precision="0" />
+    <Property Name="TAR_FECHA_VENCIMIENTO" Type="DateTime" Precision="0" />
+    <Property Name="TAR_ESTADO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TAR_CODIGO_CLIENTE" Type="Int32" />
+    <Property Name="TAR_NOMBRE_CLIENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMI_CODIGO" Type="Int32" />
+    <NavigationProperty Name="EMISOR" Relationship="TARJETAS_ULACITModel.FK_TARJETA_EMISOR" FromRole="TARJETA" ToRole="EMISOR" />
+  </EntityType>
+  <Association Name="FK_TARJETA_EMISOR">
+    <End Type="TARJETAS_ULACITModel.EMISOR" Role="EMISOR" Multiplicity="0..1" />
+    <End Type="TARJETAS_ULACITModel.TARJETA" Role="TARJETA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMISOR">
+        <PropertyRef Name="EMI_CODIGO" />
+      </Principal>
+      <Dependent Role="TARJETA">
+        <PropertyRef Name="EMI_CODIGO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

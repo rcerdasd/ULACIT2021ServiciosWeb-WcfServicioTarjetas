@@ -14,6 +14,20 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="TipoEmisorDePrefijo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prefijo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TipoEmisorDePrefijoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TipoEmisorDePrefijoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetData">
     <xs:complexType>
       <xs:sequence>

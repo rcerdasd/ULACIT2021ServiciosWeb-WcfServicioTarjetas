@@ -6,6 +6,8 @@
     <edmx:Diagrams>
       <Diagram DiagramId="dc5db02cbeef448f8c98ddcb5b1e6a49" Name="Diagram1">
         <EntityTypeShape EntityType="TARJETAS_ULACITModel.EMISOR" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TARJETAS_ULACITModel.TARJETA" Width="1.5" PointX="3.375" PointY="0.75" />
+        <AssociationConnector Association="TARJETAS_ULACITModel.FK_TARJETA_EMISOR" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

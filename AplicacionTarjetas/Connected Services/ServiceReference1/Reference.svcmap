@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="352b1ac4-8e35-4a2b-9fae-ccf68958005d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53826/ServiceTar.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceTar.xsd" MetadataType="Schema" ID="733d3640-274d-4087-863f-b393a2ac1286" SourceId="1" SourceUrl="http://localhost:53826/ServiceTar.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceTar1.xsd" MetadataType="Schema" ID="cd38b345-1d83-4060-bfa8-244901ca339a" SourceId="1" SourceUrl="http://localhost:53826/ServiceTar.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServiceTar.disco" MetadataType="Disco" ID="c0824bd1-33b9-4c89-af05-f793df8c247e" SourceId="1" SourceUrl="http://localhost:53826/ServiceTar.svc?disco" />
+    <MetadataFile FileName="ServiceTar.wsdl" MetadataType="Wsdl" ID="4075bbc4-0774-495a-9341-6231193f04d5" SourceId="1" SourceUrl="http://localhost:53826/ServiceTar.svc?wsdl" />
+    <MetadataFile FileName="ServiceTar2.xsd" MetadataType="Schema" ID="888220c1-cc72-48cc-8225-a4a2730b4a91" SourceId="1" SourceUrl="http://localhost:53826/ServiceTar.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceTar3.xsd" MetadataType="Schema" ID="184d4f9a-cc8f-4a92-84a3-690193287e93" SourceId="1" SourceUrl="http://localhost:53826/ServiceTar.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
